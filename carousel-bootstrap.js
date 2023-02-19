@@ -66,7 +66,7 @@ class FdsCarousel extends HTMLElement {
             /*Width of image is 980px. Height is 570px.*/
             padding-top: calc(570 / 980 * 100%);
             overflow: hidden;
-            height: ${this.heightimg ? this.heightimg : '100%'};
+            height: ${this.heightimg ? this.heightimg : '100vh'};
         }        
         .carousel-container img {
             position: absolute;
