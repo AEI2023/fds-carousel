@@ -15,7 +15,7 @@ Carousel similar to bootstrap using Web component.
 
 ---
 
-##Structure
+## Structure
 
 ```html
 <fds-carousel speed="5000" heightimg="300px">
