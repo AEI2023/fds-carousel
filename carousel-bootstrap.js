@@ -64,7 +64,7 @@ class FdsCarousel extends HTMLElement {
             position: relative;
             width: 100%;
             /*Width of image is 980px. Height is 570px.*/
-            padding-top: calc(570 / 980 * 100%);
+            padding-top: calc(${this.heightimg ? this.heightimg.replace(/\D/g,'') : '300'} / 980 * 100%);
             overflow: hidden;
             height: ${this.heightimg ? this.heightimg : '100vh'};
         }        
@@ -73,8 +73,8 @@ class FdsCarousel extends HTMLElement {
             top: 0;
             left: 0;
             width: 100%;
-            height: ${this.heightimg ? this.heightimg : '100%'};
-            object-fit: fill;
+            height: 100%;
+            
         }        
         .left-arrow {
             position: absolute;
@@ -136,7 +136,7 @@ class FdsCarousel extends HTMLElement {
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 45px;
+            height: 45px;            
         }
         
         .circle {
@@ -222,13 +222,13 @@ class FdsCarousel extends HTMLElement {
       
         </style>
         <div class="carousel-container">
-        <div class="carousel" id="carousel-1" auto-scroll="${this.speed ? this.speed : '2000'}">
-          ${images}
-          <section class="circle-container"><div class="circle"></div><div class="circle"></div><div class="circle"></div></section>
-          <div class="left-arrow"><span class="chevron left"></span></div>
-          <div class="right-arrow"><span class="chevron right"></span></div>
-        </div>
-      </div>`;
+            <div class="carousel" id="carousel-1" auto-scroll="${this.speed ? this.speed : '2000'}">
+            ${images}
+            <section class="circle-container"><div class="circle"></div><div class="circle"></div><div class="circle"></div></section>
+            <div class="left-arrow"><span class="chevron left"></span></div>
+            <div class="right-arrow"><span class="chevron right"></span></div>
+            </div>
+        </div>`;
         
         //Right Arrow & Left Arrow        
         let rightArrow = shadow.querySelector("#carousel-1 .right-arrow");

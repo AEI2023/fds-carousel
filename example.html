@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example using WebComponent</title>
+    <style>
+        /* Alineado vertical y horizontal */
+        html {
+            background:#0f0f0f;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        body {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .contenedor {
+            width: 800px;
+            height: 300px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        @media(max-width:992px) {
+            .contenedor { width: 80%;}
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="contenedor">
+        <fds-carousel name="Craig" speed="5000" heightimg="300px">
+            <div class="sections">
+              <section class="carousel-screen">          
+                <a href="url.com">
+                  <picture>
+                    <source media="(max-width:992px)" srcset="https://picsum.photos/seed/picsum/500/700?random=1">
+                    <source media="(min-width:992px)" srcset="https://picsum.photos/seed/picsum/900/450?random=1">
+                    <img src="https://picsum.photos/seed/picsum/900/450?random=1" alt="Imagen del carousel" loading="lazy">
+                  </picture>
+                </a>
+                <section class="text-container">
+                  <p>Chicago</p>
+                  <p>Thank you, Chicago!</p>
+                </section>
+              </section>
+              <section class="carousel-screen">          
+                <a href="url.com">
+                  <picture>
+                    <source media="(max-width:992px)" srcset="https://picsum.photos/seed/picsum/500/700?random=2">
+                    <source media="(min-width:992px)" srcset="https://picsum.photos/seed/picsum/900/450?random=2">
+                    <img src="https://picsum.photos/seed/picsum/900/450?random=2" alt="Imagen del carousel" loading="lazy">
+                  </picture>
+                </a>
+                <section class="text-container">
+                  <p>New York</p>
+                  <p>We love the Big Apple!</p>
+                </section>
+              </section>
+              <section class="carousel-screen">
+               
+                <a href="url.com">
+                  <picture>
+                    <source media="(max-width:992px)" srcset="https://picsum.photos/seed/picsum/500/700?random=3">
+                    <source media="(min-width:992px)" srcset="https://picsum.photos/seed/picsum/900/450?random=3">
+                    <img src="https://picsum.photos/seed/picsum/900/450?random=3" alt="Imagen del carousel" loading="lazy">
+                  </picture>
+                </a>
+                <section class="text-container">
+                  <p>Los Angeles</p>
+                  <p>LA is always so much fun!</p>
+                </section>
+              </section>   
+            </div>     
+          </fds-carousel> 
+    </div>
+    <script src="carousel-bootstrap.js" type="module"></script>
+    
+</body>
+</html>
